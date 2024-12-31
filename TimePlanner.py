@@ -91,7 +91,7 @@ displayDict = {
     1 : "relaxation",
     2 : "homework"
 }
-
+print("Timetable below")
 for day in days:
     for activity in day.activities:
         print(f"I have {displayDict[activity.type]} from {activity.startTime} until {activity.endTime} on {day.dayOfWeek}")
