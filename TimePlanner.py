@@ -93,5 +93,9 @@ displayDict = {
 }
 print("Timetable below")
 for day in days:
-    for activity in day.activities:
-        print(f"I have {displayDict[activity.type]} from {activity.startTime} until {activity.endTime} on {day.dayOfWeek}")
+    print(f"\n{day.dayOfWeek}:")  # Printing the day of the week
+    if day.activities:  # Check if there are activities for the day
+        for activity in day.activities:
+            print(f"    I have {displayDict[activity.type]} from {activity.startTime} until {activity.endTime}")
+    else:
+        print("    No activities scheduled.")
